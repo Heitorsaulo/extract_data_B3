@@ -6,7 +6,6 @@ import pandas as pd
 import requests
 #7QP5EEWK8EMX6MNU API KEY
 
-# %% [markdown]
 # ## Codigo salvo
 # url = 'https://www.alphavantage.co/query?function=NEWS_SENTIMENT&symbol=BTLG11.SA&apikey=7QP5EEWK8EMX6MNU'
 # r = requests.get(url)
@@ -18,19 +17,15 @@ import requests
 # 
 # API link para extrair noticias sobre o ativo requisitado
 
-# %% [markdown]
 # # Diretorio dos dados extraidos
 # 
 # D:\ProjetoFII\dadosColetadosFii
 # 
 
-# %%
 jsonFiisImport = pd.read_json(r'C:\Users\Heitor\PycharmProjects\DadosFii\Fii.json')
 ERROR_MSG = 'Error Message'
-# %% [markdown]
 # # Fundos que já foram feitos requisição: 0 a 65
 
-# %%
 dataJson = list()
 
 for num in range(65,80):
@@ -42,12 +37,10 @@ for num in range(65,80):
     dataJson.append(data)
 
 
-# %%
 dfDataFii = pd.DataFrame(dataJson)
 
 
 
-# %% [markdown]
 # # Filtrar todos os fundos que o request na API conseguiu ter acesso aos dados:
 
 # %%
