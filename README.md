@@ -35,22 +35,6 @@ O projeto tem como objetivo aplicar **técnicas de aprendizado de máquina** par
 
 ---
 
-## 📂 Estrutura do Repositório
-
-extract_data_B3-main/
-├── data/ # Dados coletados e tratados
-├── notebooks/ # Notebooks Jupyter com experimentos
-├── src/ # Scripts Python com funções principais
-│ ├── data_collection.py
-│ ├── preprocessing.py
-│ ├── models.py
-│ └── utils.py
-├── requirements.txt # Dependências do projeto
-└── README.md # Documentação
-
-
----
-
 ## 🚀 Como Executar
 
 1. Clone o repositório:
@@ -61,33 +45,33 @@ extract_data_B3-main/
 
 Crie e ative um ambiente virtual:
 
-python -m venv venv
-source venv/bin/activate   # Linux/Mac
-venv\Scripts\activate      # Windows
+- python -m venv venv
+- source venv/bin/activate   # Linux/Mac
+- venv\Scripts\activate      # Windows
 
 
 Instale as dependências:
 
-pip install -r requirements.txt
+- pip install -r requirements.txt
 
 
 Execute os notebooks da pasta notebooks/ ou os scripts em src/.
 
 📈 Resultados
 
-Regressão apresentou forte correlação entre variáveis históricas e retornos.
+- Regressão apresentou forte correlação entre variáveis históricas e retornos.
 
-Clustering produziu clusters bem definidos, mas com pouca correlação com desempenho real.
+- Clustering produziu clusters bem definidos, mas com pouca correlação com desempenho real.
 
-Classificação supervisionada apresentou bons resultados após balanceamento das classes.
+- Classificação supervisionada apresentou bons resultados após balanceamento das classes.
 
 🔮 Trabalhos Futuros
 
-Integrar modelos de regressão em estratégias práticas de alocação.
+- Integrar modelos de regressão em estratégias práticas de alocação.
 
-Criar uma interface interativa para uso por investidores.
+- Criar uma interface interativa para uso por investidores.
 
-Expandir a base de dados e aplicar técnicas mais avançadas de Machine Learning.
+- Expandir a base de dados e aplicar técnicas mais avançadas de Machine Learning.
 
 📖 Referência
 
