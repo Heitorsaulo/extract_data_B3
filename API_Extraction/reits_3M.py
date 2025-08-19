@@ -4,7 +4,7 @@ import numpy as np
 import yahooquery as yq
 import yfinance as yf
 #%%
-pd_fiis = pd.read_csv('statusinvest-busca-avancada.csv', sep=';')
+pd_fiis = pd.read_csv('data/statusinvest-busca-avancada.csv', sep=';')
 len(pd_fiis['TICKER'])
 #%%
 s = yq.Screener()
@@ -102,12 +102,12 @@ df.head()
 #%%
 import pickle
 
-with open("colunas_sugeridas_gpt.pkl", "rb") as f:
+with open("../colunas_extraction/colunas_sugeridas_gpt.pkl", "rb") as f:
     feature_GPT = pickle.load(f)
 #%%
 import pickle
 
-with open("colunas_random_forest_classification.pkl", "rb") as f:
+with open("../colunas_extraction/colunas_random_forest_classification.pkl", "rb") as f:
     feature_GPT = pickle.load(f)
 #%%
 dataJson = list()
@@ -172,7 +172,7 @@ df_stocks
 #%%
 df_stocks.to_csv('reits_3M_mergeForWeek.csv', index=False)
 #%%
-df_stocks = pd.read_csv('reits_3M_mergeForWeek.csv')
+df_stocks = pd.read_csv('data/reits_3M_mergeForWeek.csv')
 df_stocks.head()
 #%%
 def remover_colunas_correlacionadas(df):
@@ -216,7 +216,7 @@ def merge_indices_stocks(all_stocks_param, df_indices_cleaned_param):
 
         return merged_df
 #%%
-merged_info = merge_indices_stocks(df_fil, pd.read_csv('monthly_indices.csv'))
+merged_info = merge_indices_stocks(df_fil, pd.read_csv('data/monthly_indices.csv'))
 #%%
 merged_info
 #%%
